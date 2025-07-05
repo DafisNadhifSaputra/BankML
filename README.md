@@ -1,55 +1,55 @@
-# Bank Transaction Analysis - Machine Learning Project
+# Analisis Transaksi Bank - Proyek Machine Learning
 
-![Project Banner](https://img.shields.io/badge/Machine%20Learning-Bank%20Analysis-blue.svg)
+![Project Banner](https://img.shields.io/badge/Machine%20Learning-Analisis%20Bank-blue.svg)
 ![Python](https://img.shields.io/badge/Python-3.8+-brightgreen.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## 🚀 Project Overview
+## 🚀 Gambaran Proyek
 
-This project presents a comprehensive machine learning analysis of bank transaction data, focusing on customer segmentation through clustering and predictive modeling through classification. The analysis covers 2,182 transaction records with 15 detailed features, providing insights into customer behavior patterns and potential fraud detection.
+Proyek ini menyajikan analisis machine learning komprehensif terhadap data transaksi bank, dengan fokus pada segmentasi pelanggan melalui clustering dan pemodelan prediktif melalui klasifikasi. Analisis mencakup 2.182 catatan transaksi dengan 15 fitur detail, memberikan wawasan tentang pola perilaku pelanggan dan deteksi penipuan potensial.
 
-### 🎯 Key Objectives
-- **Customer Segmentation**: Identify distinct customer groups based on transaction patterns
-- **Predictive Modeling**: Build classification models to predict customer segments
-- **Fraud Detection**: Analyze patterns that could indicate anomalous behavior
-- **Business Intelligence**: Provide actionable insights for financial institutions
+### 🎯 Tujuan Utama
+- **Segmentasi Pelanggan**: Mengidentifikasi kelompok pelanggan yang berbeda berdasarkan pola transaksi
+- **Pemodelan Prediktif**: Membangun model klasifikasi untuk memprediksi segmen pelanggan
+- **Deteksi Penipuan**: Menganalisis pola yang dapat mengindikasikan perilaku anomali
+- **Business Intelligence**: Menyediakan wawasan yang dapat ditindaklanjuti untuk institusi keuangan
 
-## 📊 Dataset Information
+## 📊 Informasi Dataset
 
-The dataset contains comprehensive bank transaction data with the following features:
+Dataset berisi data transaksi bank komprehensif dengan fitur-fitur berikut:
 
-| Feature | Description |
+| Fitur | Deskripsi |
 |---------|-------------|
-| `TransactionID` | Unique identifier for each transaction |
-| `AccountID` | Unique account identifier |
-| `TransactionAmount` | Transaction value in currency |
-| `TransactionDate` | Date and time of transaction |
-| `TransactionType` | Credit or Debit transaction |
-| `Location` | Geographic location (US cities) |
-| `DeviceID` | Device used for transaction |
-| `IP Address` | IPv4 address during transaction |
-| `MerchantID` | Unique merchant identifier |
-| `AccountBalance` | Account balance after transaction |
-| `PreviousTransactionDate` | Last transaction date |
-| `Channel` | Transaction channel (Online, ATM, Branch) |
-| `CustomerAge` | Customer age |
-| `CustomerOccupation` | Customer profession |
-| `TransactionDuration` | Transaction duration in seconds |
-| `LoginAttempts` | Number of login attempts |
+| `TransactionID` | Identifier unik untuk setiap transaksi |
+| `AccountID` | Identifier akun unik |
+| `TransactionAmount` | Nilai transaksi dalam mata uang |
+| `TransactionDate` | Tanggal dan waktu transaksi |
+| `TransactionType` | Transaksi kredit atau debit |
+| `Location` | Lokasi geografis (kota-kota AS) |
+| `DeviceID` | Perangkat yang digunakan untuk transaksi |
+| `IP Address` | Alamat IPv4 selama transaksi |
+| `MerchantID` | Identifier merchant unik |
+| `AccountBalance` | Saldo akun setelah transaksi |
+| `PreviousTransactionDate` | Tanggal transaksi terakhir |
+| `Channel` | Saluran transaksi (Online, ATM, Branch) |
+| `CustomerAge` | Usia pelanggan |
+| `CustomerOccupation` | Profesi pelanggan |
+| `TransactionDuration` | Durasi transaksi dalam detik |
+| `LoginAttempts` | Jumlah percobaan login |
 
-## 🔧 Technical Implementation
+## 🔧 Implementasi Teknis
 
-### Technologies Used
+### Teknologi yang Digunakan
 - **Python 3.8+**
-- **Pandas** - Data manipulation and analysis
-- **NumPy** - Numerical computing
-- **Scikit-learn** - Machine learning algorithms
-- **Matplotlib & Seaborn** - Data visualization
-- **Yellowbrick** - Machine learning visualization
+- **Pandas** - Manipulasi dan analisis data
+- **NumPy** - Komputasi numerik
+- **Scikit-learn** - Algoritma machine learning
+- **Matplotlib & Seaborn** - Visualisasi data
+- **Yellowbrick** - Visualisasi machine learning
 
-### Machine Learning Pipeline
+### Pipeline Machine Learning
 
-#### 1. Data Preprocessing
+#### 1. Preprocessing Data
 ```python
 # Feature scaling
 scaler = MinMaxScaler()
@@ -66,49 +66,50 @@ for col in categorical_features:
     encoders[col] = le
 ```
 
-#### 2. Clustering Analysis
-- **Algorithm**: K-Means Clustering
-- **Optimization**: Elbow Method for optimal cluster determination
-- **Clusters Identified**: 4 distinct customer segments
-- **Evaluation**: Silhouette Score analysis
+#### 2. Analisis Clustering
+- **Algoritma**: K-Means Clustering
+- **Optimisasi**: Metode Elbow untuk menentukan cluster optimal
+- **Cluster yang Diidentifikasi**: 4 segmen pelanggan yang berbeda
+- **Evaluasi**: Analisis Silhouette Score
 
-#### 3. Classification Models
-Multiple algorithms implemented and compared:
+#### 3. Model Klasifikasi
+Beberapa algoritma diimplementasikan dan dibandingkan:
 
-| Algorithm | Accuracy | Precision | Recall | F1-Score |
+| Algoritma | Akurasi | Precision | Recall | F1-Score |
 |-----------|----------|-----------|--------|----------|
 | **Decision Tree** | **100.0%** | **1.000** | **1.000** | **1.000** |
 | **Random Forest** | **100.0%** | **1.000** | **1.000** | **1.000** |
 | **Support Vector Machine** | **100.0%** | **1.000** | **1.000** | **1.000** |
 | K-Nearest Neighbors | 99.77% | 0.998 | 0.998 | 0.998 |
 
-## 📈 Key Results
+## 📈 Hasil Utama
 
-### Customer Segmentation
-1. **Professional Doctors (Premium)** (25.4%): Highest transaction values, premium service preference
-2. **Efficient Students (Growth)** (26.2%): Fast transactions, good financial management
-3. **Digital Native (Tech-Savvy)** (23.9%): ATM-preferred, self-service oriented
-4. **Mature Conservative (Stable)** (24.5%): Traditional banking, branch-focused
+### Segmentasi Pelanggan
+1. **Professional Doctors (Premium)** (25.4%): Nilai transaksi tertinggi, preferensi layanan premium
+2. **Efficient Students (Growth)** (26.2%): Transaksi cepat, manajemen keuangan yang baik
+3. **Digital Native (Tech-Savvy)** (23.9%): Lebih suka ATM, berorientasi self-service
+4. **Mature Conservative (Stable)** (24.5%): Perbankan tradisional, fokus pada cabang
 
-### Model Performance
-- **Exceptional Results**: 3 models achieved perfect 100.0% accuracy
-- **Consistent Performance**: All models show excellent prediction capability
-- **Best Overall**: Decision Tree, Random Forest, and SVM with perfect scores
+### Performa Model
+- **Hasil Luar Biasa**: 3 model mencapai akurasi sempurna 100.0%
+- **Performa Konsisten**: Semua model menunjukkan kemampuan prediksi yang sangat baik
+- **Terbaik Secara Keseluruhan**: Decision Tree, Random Forest, dan SVM dengan skor sempurna
 
-## 🌐 Live Demo
+## 🌐 Demo Live
 
-Visit the interactive website: [Bank Transaction Analysis](https://github.com/DafisNadhifSaputra/BankML)
+🌐 **Website Live**: [Analisis Transaksi Bank](https://dafisnadhifsaputra.github.io/BankML)  
+📂 **Repository GitHub**: [Source Code](https://github.com/DafisNadhifSaputra/BankML)
 
-### Website Features
-- **Interactive Visualizations**: Dynamic charts showing clustering results
-- **Model Comparison**: Side-by-side performance metrics
-- **Responsive Design**: Mobile-friendly interface
-- **Modern UI**: Clean, professional design with animations
+### Fitur Website
+- **Visualisasi Interaktif**: Grafik dinamis menampilkan hasil clustering
+- **Perbandingan Model**: Metrik performa side-by-side
+- **Desain Responsif**: Interface yang mobile-friendly
+- **UI Modern**: Desain yang bersih dan profesional dengan animasi
 
-## 📁 Project Structure
+## 📁 Struktur Proyek
 
 ```
-bank-transaction-analysis/
+analisis-transaksi-bank/
 │
 ├── notebooks/
 │   ├── [Clustering]_Submission_Akhir_BMLP_Dafis_Nadhif_Saputra.ipynb
@@ -131,21 +132,22 @@ bank-transaction-analysis/
 ├── index.html
 ├── styles.css
 ├── script.js
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
-## 🚀 Getting Started
+## 🚀 Memulai
 
-### Prerequisites
+### Prasyarat
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn yellowbrick joblib
 ```
 
-### Running the Analysis
-1. **Clone the repository**
+### Menjalankan Analisis
+1. **Clone repository**
    ```bash
-   git clone https://github.com/your-username/bank-transaction-analysis.git
-   cd bank-transaction-analysis
+   git clone https://github.com/DafisNadhifSaputra/BankML.git
+   cd BankML
    ```
 
 2. **Install dependencies**
@@ -153,82 +155,82 @@ pip install pandas numpy scikit-learn matplotlib seaborn yellowbrick joblib
    pip install -r requirements.txt
    ```
 
-3. **Run the notebooks**
-   - Open Jupyter Notebook or JupyterLab
-   - Navigate to the notebooks folder
-   - Run the clustering analysis first, then classification
+3. **Jalankan notebooks**
+   - Buka Jupyter Notebook atau JupyterLab
+   - Navigasi ke folder notebooks
+   - Jalankan analisis clustering terlebih dahulu, kemudian klasifikasi
 
-4. **View the website**
-   - Open `index.html` in your browser
-   - Or deploy to GitHub Pages for live hosting
+4. **Lihat website**
+   - Buka `index.html` di browser Anda
+   - Atau deploy ke GitHub Pages untuk hosting live
 
-## 📊 Visualization Examples
+## 📊 Contoh Visualisasi
 
-### Clustering Visualization
-- **Scatter plots** showing customer segments
-- **Correlation matrices** for feature relationships
-- **Distribution plots** for numerical features
+### Visualisasi Clustering
+- **Scatter plots** menampilkan segmen pelanggan
+- **Correlation matrices** untuk hubungan antar fitur
+- **Distribution plots** untuk fitur numerik
 
-### Classification Results
-- **Performance comparison charts**
-- **Confusion matrices** for each model
+### Hasil Klasifikasi
+- **Grafik perbandingan performa**
+- **Confusion matrices** untuk setiap model
 - **Feature importance plots**
 
-## 🎯 Business Applications
+## 🎯 Aplikasi Bisnis
 
-### Financial Institutions
-- **Customer Segmentation**: Targeted marketing campaigns
-- **Risk Assessment**: Identify high-risk transaction patterns
-- **Product Recommendations**: Personalized financial products
+### Institusi Keuangan
+- **Segmentasi Pelanggan**: Kampanye pemasaran yang ditargetkan
+- **Penilaian Risiko**: Mengidentifikasi pola transaksi berisiko tinggi
+- **Rekomendasi Produk**: Produk keuangan yang dipersonalisasi
 
-### Fraud Detection
-- **Anomaly Detection**: Identify unusual transaction patterns
-- **Real-time Monitoring**: Flag suspicious activities
-- **Security Enhancement**: Improve authentication systems
+### Deteksi Penipuan
+- **Deteksi Anomali**: Mengidentifikasi pola transaksi yang tidak biasa
+- **Monitoring Real-time**: Menandai aktivitas yang mencurigakan
+- **Peningkatan Keamanan**: Memperbaiki sistem autentikasi
 
-## 🔮 Future Enhancements
+## 🔮 Pengembangan Selanjutnya
 
-- [ ] **Deep Learning Models**: Implement neural networks for improved accuracy
-- [ ] **Real-time Processing**: Stream processing for live transaction analysis
-- [ ] **Advanced Visualization**: 3D clustering plots and interactive dashboards
-- [ ] **API Development**: REST API for model predictions
-- [ ] **Docker Deployment**: Containerized application deployment
+- [ ] **Model Deep Learning**: Implementasi neural networks untuk akurasi yang lebih baik
+- [ ] **Pemrosesan Real-time**: Stream processing untuk analisis transaksi live
+- [ ] **Visualisasi Lanjutan**: Plot clustering 3D dan dashboard interaktif
+- [ ] **Pengembangan API**: REST API untuk prediksi model
+- [ ] **Deployment Docker**: Deployment aplikasi yang terkontainerisasi
 
-## 📄 License
+## 📄 Lisensi
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail.
 
-## 👨‍💻 Author
+## 👨‍💻 Penulis
 
 **Dafis Nadhif Saputra**
-- GitHub: [@dafisnadhif](https://github.com/dafisnadhif)
-- LinkedIn: [Dafis Nadhif Saputra](https://linkedin.com/in/dafisnadhif)
-- Email: dafis.nadhif@email.com
+- GitHub: [@DafisNadhifSaputra](https://github.com/DafisNadhifSaputra)
+- LinkedIn: [Dafis Nadhif Saputra](https://www.linkedin.com/in/dafis-nadhif-saputra-10450a27b)
+- Email: dafisnadhifs123@gmail.com
 
-## 🙏 Acknowledgments
+## 🙏 Pengakuan
 
-- **BMLP Program**: For providing the learning framework
-- **Dataset Source**: Bank transaction data for educational purposes
-- **Open Source Community**: For the amazing libraries and tools
+- **Program BMLP**: Untuk menyediakan kerangka pembelajaran
+- **Sumber Dataset**: Data transaksi bank untuk tujuan edukasi
+- **Komunitas Open Source**: Untuk library dan tools yang luar biasa
 
-## 📈 Performance Metrics
+## 📈 Metrik Performa
 
 ```
-Model Performance Summary:
-├── Decision Tree: 100.0% accuracy (Perfect)
-├── Random Forest: 100.0% accuracy (Perfect)
-├── SVM: 100.0% accuracy (Perfect)
-└── KNN: 99.77% accuracy (Excellent)
+Ringkasan Performa Model:
+├── Decision Tree: 100.0% akurasi (Sempurna)
+├── Random Forest: 100.0% akurasi (Sempurna)
+├── SVM: 100.0% akurasi (Sempurna)
+└── KNN: 99.77% akurasi (Sangat Baik)
 
-Clustering Results:
-├── Total Data: 2,182 transactions
-├── Optimal Clusters: 4
-├── Distribution: 23.9% - 26.2% (balanced)
-└── Segments: Professional, Student, Digital, Conservative
+Hasil Clustering:
+├── Total Data: 2.182 transaksi
+├── Cluster Optimal: 4
+├── Distribusi: 23.9% - 26.2% (seimbang)
+└── Segmen: Professional, Student, Digital, Conservative
 ```
 
 ---
 
-⭐ **Star this repository if you found it helpful!**
+⭐ **Beri bintang pada repository ini jika membantu Anda!**
 
-📧 **Questions or suggestions? Feel free to open an issue or contact me directly.**
+📧 **Ada pertanyaan atau saran? Jangan ragu untuk membuka issue atau menghubungi saya langsung.**

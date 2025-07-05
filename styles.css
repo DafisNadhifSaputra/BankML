@@ -1536,4 +1536,24 @@ body.dark-theme .achievement-content p {
     color: #a0aec0;
 }
 
+/* Note text styling */
+.note-text {
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #856404;
+    line-height: 1.5;
+}
+
+body.dark-theme .note-text {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffeaa7;
+    border-left-color: #fdcb6e;
+}
+
 /* Contact Section */

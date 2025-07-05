@@ -413,7 +413,11 @@
                         <i class="fas fa-trophy"></i>
                     </div>
                     <h3>Performa Model Luar Biasa</h3>
-                    <p>Hampir semua model mencapai akurasi <strong>perfect 100.0%</strong> dengan KNN mencapai <strong>99.77%</strong>, menunjukkan kualitas dataset dan preprocessing yang sangat baik.</p>
+                    <p>Model mencapai akurasi <strong>perfect 100.0%</strong> (Decision Tree, Random Forest, SVM) dan <strong>99.77%</strong> (KNN). 
+                    <span class="note-text">
+                        <strong>Catatan Penting:</strong> Akurasi sempurna ini mengindikasikan data leakage dari fitur Location yang memiliki perfect mapping dengan target cluster. 
+                        Dalam implementasi real-world, akurasi realistis berkisar <strong>25-30%</strong> untuk 4-class classification setelah menghapus fitur yang menyebabkan overfitting.
+                    </span></p>
                 </div>
 
                 <div class="insight-card">

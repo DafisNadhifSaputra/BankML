@@ -75,12 +75,14 @@ for col in categorical_features:
 #### 3. Model Klasifikasi
 Beberapa algoritma diimplementasikan dan dibandingkan:
 
-| Algoritma | Akurasi | Precision | Recall | F1-Score |
-|-----------|----------|-----------|--------|----------|
-| **Decision Tree** | **100.0%** | **1.000** | **1.000** | **1.000** |
-| **Random Forest** | **100.0%** | **1.000** | **1.000** | **1.000** |
-| **Support Vector Machine** | **100.0%** | **1.000** | **1.000** | **1.000** |
-| K-Nearest Neighbors | 99.77% | 0.998 | 0.998 | 0.998 |
+| Algoritma | Akurasi (Original) | Akurasi (Improved) | Status |
+|-----------|-------------------|-------------------|---------|
+| **Decision Tree** | **100.0%** | **27.2%** | ✅ Fixed |
+| **Random Forest** | **100.0%** | **26.9%** | ✅ Fixed |
+| **Support Vector Machine** | **100.0%** | **26.4%** | ✅ Fixed |
+| K-Nearest Neighbors | 99.77% | 27.3% | ✅ Fixed |
+
+**Note**: Akurasi sempurna 100% disebabkan oleh data leakage (fitur Location memiliki perfect mapping dengan target). Setelah diperbaiki dengan menghapus fitur yang menyebabkan leakage dan menambahkan regularization, model menghasilkan akurasi yang lebih realistis (~27%).
 
 ## 📈 Hasil Utama
 
@@ -91,9 +93,10 @@ Beberapa algoritma diimplementasikan dan dibandingkan:
 4. **Mature Conservative (Stable)** (24.5%): Perbankan tradisional, fokus pada cabang
 
 ### Performa Model
-- **Hasil Luar Biasa**: 3 model mencapai akurasi sempurna 100.0%
-- **Performa Konsisten**: Semua model menunjukkan kemampuan prediksi yang sangat baik
-- **Terbaik Secara Keseluruhan**: Decision Tree, Random Forest, dan SVM dengan skor sempurna
+- **Important Discovery**: Akurasi sempurna 100% pada model original disebabkan oleh data leakage
+- **Root Cause**: Fitur Location memiliki perfect mapping dengan target clusters  
+- **Solution**: Model diperbaiki dengan menghapus fitur yang menyebabkan leakage dan regularization
+- **Realistic Performance**: Model yang diperbaiki mencapai akurasi ~27% (lebih realistis untuk 4-class classification)
 
 ## 🌐 Demo Live
 

@@ -1,0 +1,23 @@
+theme: jekyll-theme-minimal
+title: Bank Transaction Analysis - ML Project
+description: Comprehensive machine learning analysis for customer segmentation and fraud detection in bank transactions
+author: Dafis Nadhif Saputra
+github:
+  repository_name: BMLP_Dafis_Nadhif_Saputra
+  repository_url: https://github.com/dafisnadhif/BMLP_Dafis_Nadhif_Saputra
+
+plugins:
+  - jekyll-github-metadata
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+google_analytics: # Add your Google Analytics ID if needed
+
+exclude:
+  - node_modules/
+  - .sass-cache/
+  - Gemfile
+  - Gemfile.lock
+  - .git/
+  - .gitignore
+  - README.md

@@ -1220,6 +1220,29 @@ section {
         gap: 2rem;
     }
 
+    .certificate-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .certificate-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .certificate-logo {
+        margin: 0 auto;
+    }
+
+    .certificate-badge {
+        margin: 0 auto;
+    }
+
+    .certificate-actions {
+        justify-content: center;
+    }
+
     .model-metrics {
         grid-template-columns: 1fr;
         gap: 0.5rem;
@@ -1252,3 +1275,265 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Certificate Section */
+.certificate {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 5rem 0;
+}
+
+body.dark-theme .certificate {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+}
+
+.certificate-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .certificate-card {
+    background: #4a5568;
+    border-color: #718096;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+body.dark-theme .certificate-header {
+    border-bottom-color: #718096;
+}
+
+.certificate-logo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.certificate-info h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-theme .certificate-info h3 {
+    color: #e2e8f0;
+}
+
+.certificate-issuer {
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.certificate-date {
+    font-size: 0.95rem;
+    color: #718096;
+}
+
+body.dark-theme .certificate-date {
+    color: #a0aec0;
+}
+
+.certificate-badge {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.certificate-description {
+    margin-bottom: 2rem;
+}
+
+.certificate-description p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+body.dark-theme .certificate-description p {
+    color: #cbd5e0;
+}
+
+.certificate-description ul {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.certificate-description li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: #2d3748;
+}
+
+body.dark-theme .certificate-description li {
+    color: #e2e8f0;
+}
+
+.certificate-description li i {
+    color: #48bb78;
+    font-size: 0.9rem;
+}
+
+.certificate-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-certificate {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-certificate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-verify {
+    background: transparent;
+    color: #667eea;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-verify:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+body.dark-theme .btn-verify {
+    color: #a78bfa;
+    border-color: #a78bfa;
+}
+
+body.dark-theme .btn-verify:hover {
+    background: #a78bfa;
+    color: white;
+}
+
+.certificate-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.achievement-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .achievement-item {
+    background: #4a5568;
+    border-color: #718096;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.achievement-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-theme .achievement-content h4 {
+    color: #e2e8f0;
+}
+
+.achievement-content p {
+    font-size: 0.95rem;
+    color: #718096;
+    line-height: 1.5;
+}
+
+body.dark-theme .achievement-content p {
+    color: #a0aec0;
+}
+
+/* Contact Section */
